@@ -1,0 +1,74 @@
+Victorian Road Crash Data
+
+URL: https://discover.data.vic.gov.au/dataset/victoria-road-crash-data/resource/5df1f373-0c90-48f5-80e1-7b2a35507134
+
+The csv data is a single flat file containing a subset of the attributes from the various 'Victoria Road Crash Data' csv files. It provides a single set of attributes for each road crash that has occurred within Victoria. Supporting documentation in the metadata will provide further details of the attributes. Data Dictionary is available in the URL above.
+
+
+
+Field	                        |	Value
+Published (Metadata Record)	|	10/08/2025
+Last updated	                |	21/02/2026
+Organisation	                |	Department of Transport and Planning
+Category			|	Transport
+License	                        |	Creative Commons Attribution 4.0 International
+Update Frequency		|	Monthly
+
+Data Dictionary:
+
+Field Name | Name | Type | Description | Fixed Values
+--------------------------------------------------------------------------------
+ACCIDENT NO | Accident No | CHAR | ACCIDENT NO is the Primary Key for the database to uniquely identify the accident and cannot contain NULL values. First character T indicates TIS incident and characters 2-5 typically represent the year in which the accident created in TIS system and characters 6-11 are a numeric sequencing number | 
+ACCIDENT_DATE | Accident Date | DATE | TBC | 
+ACCIDENT_TIME | Accident Time | TIME | hh.mm.ss. Original date stored in 24 hour format (ie 1pm = 1300 hours). Note the common practice used by the Police, when originally coding up the accident details, of 'rounding off the time' to the nearest 5 minutes or even nearest hour. This naturally occurs because in the vast majority of accidents police arrive at the scene well after the accident occurred and so the 'REAL' time of the accident is never precisely known. | 
+ACCIDENT_TYPE | Accident Type | VARCHAR | Is a character field indicates the type of accident. It is a basic description of what occurred, based on nine categories. | 1 Collision with vehicle; 2 Struck pedestrian; 3 Struck animal; 4 Collision with a fixed object; 5 Collision with some other object; 6 Vehicle overturned (no collision); 7 Fall from or in moving vehicle; 8 No collision and no object struck; 9 Other accident
+DAY_OF_WEEK | Day Of Week | NVARCHAR | The field indicates the day of the week upon which the accident occurred | 1 Sunday; 2 Monday; 3 Tuesday; 4 Wednesday; 5 Thursday; 6 Friday; 7 Saturday
+DCA CODE | DCACode | CHAR | The field indicates the Definitions for Classifying Accidents. It cannot contain NULL values. | 100–781
+DCA CODE DESCRIPTION | Dca Code Description | VARCHAR | DIVIDED is a descriptive field indicating divided portion of road. | 
+LIGHT_CONDITION | Light Condition | VARCHAR | Indicates the light condition or level of brightness at the time of the accident. This field cannot contain NULL values. | 1 Day; 2 Dusk/dawn; 3 Dark street lights on; 4 Dark street lights off; 5 Dark no street lights; 6 Dark street lights unknown; 9 Unknown
+POLICE ATTEND | Police Attend | VARCHAR | Indicates whether the police attended the scene of the accident or not. | 1 Yes; 2 No; 9 Not known
+ROAD_GEOMETRY | Road Geometry | VARCHAR | Code for layout of the road where the accident occurred | 1 Cross intersection; 2 'T' Intersection; 3 'Y' Intersection; 4 Multiple intersections; 5 Not at intersection; 6 Dead end; 7 Road closure; 8 Private property; 9 Unknown
+SEVERITY | Severity | VARCHAR | Estimation of the severity or seriousness of the accident | 1 Fatal accident; 2 Serious injury accident; 3 Other injury accident; 4 Non injury accident
+SPEED_ZONE | Speed Zone | VARCHAR | the speed zone at the location of the accident. The speed zone is generally assigned to the main vehicle involved. | 040 40 km/hr; 050 50 km/hr; 060 60 km/hr; 075 75 km/hr; 080 80 km/hr; 090 90 km/hr; 100 100 km/hr; 110 110 km/hr; 777 Other speed limit; 888 Camping grounds/off road; 999 Not known
+RUN OFFROAD | Run Off Road | VARCHAR | If the crash is considered a run off road (DCA Codes: 151, 170-173, 180-183) | Yes/No
+ROAD NAME | Road Name | NVARCHAR | Name of the road | 
+ROAD TYPE | Road Type | NVARCHAR | Type of road | 
+ROAD ROUTE 1 | Road Route 1 | INTEGER | TBC | 
+LGA NAME | LGA Name | NVARCHAR | LGA NAME is a character field contains the LGA name for the location of the crash | 
+DTP REGION | DTP Region | NVARCHAR | TBC | 
+LATITUDE | Latitude | DECIMAL | Geographical coordinates | 
+LONGITUDE | Longitude | DECIMAL | Geographical coordinates | 
+VICGRID X | Vicgrid X | NUMERIC | VicGrid94 coordinates | 
+VICGRID Y | Vicgrid Y | NUMERIC | VicGrid94 coordinates | 
+TOTAL PERSONS | Total Persons | INTEGER | the number of people involved in the accident | 
+INJ OR FATAL | Inj Or Fatal | INTEGER | the number of people involved in the accident killed or injured | 
+FATALITY | Fatality | INTEGER | Number of people who have died in the crash | 
+SERIOUSINJURY | Serious Injury | INTEGER | Number of people with a serious injury | 
+OTHERINJURY | Other Injury | INTEGER | Number of people with an other injury | 
+NONINJURED | Non Injured | INTEGER | Number of people with no injuries | 
+MALES | Males | INTEGER | Number of males involved in the crash | 
+FEMALES | Females | INTEGER | Number of females involved in the crash | 
+BICYCLIST | Bicyclist | INTEGER | Number of bicyclists involved in the crash | 
+PASSENGER | Passenger | INTEGER | Number of passengers involved in the crash | 
+DRIVER | Driver | INTEGER | Number of drivers involved in the crash | 
+PEDESTRIAN | Pedestrian | INTEGER | Number of pedestrians involved in the crash | 
+PILLION | Pillion | INTEGER | Number of pillion passengers involved in the crash | 
+MOTORCYCLIST | Motorcyclist | INTEGER | Number of motorcyclists involved in the crash | 
+UNKNOWN | Unknown | INTEGER | Number of unknown road users involved in the crash | 
+PED CYCLIST 5 12 | Ped Cyclist 5-12 | INTEGER | Number of pedestrians and cyclists between the ages 5 and 12 | 
+PED CYCLIST 13 18 | Ped Cyclist 13-18 | INTEGER | Number of pedestrians and cyclists between the ages 13 and 18 | 
+OLD PED 65 AND OVER | Old Ped 65 And Over | INTEGER | Number of pedestrians aged 65 and over | 
+OLD DRIVER 75 AND OVER | Old Driver 75 And Over | INTEGER | Number of drivers aged 75 and older | 
+YOUNG DRIVER 18 25 | Young Driver 18-25 | INTEGER | Number of drivers aged between 18 and 25 | 
+NO OF VEHICLES | No Of Vehicles | INTEGER | the number of vehicles involved in the accident. Includes bicycles but not objects, property, toys (skate boards), etc. | 
+HEAVYVEHICLE | Heavy vehicle | INTEGER | Number of heavy vehicles involved in the crash | 
+PASSENGERVEHICLE | Passenger Vehicle | INTEGER | Number of passenger vehicles involved in the crash | 
+MOTORCYCLE | Motorcycle | INTEGER | Number of motorcycles involved in the crash | 
+PT VEHICLE | Pt Vehicle | INTEGER | Number of public transport vehicles involved in the crash (tram, bus, train) | 
+DEG URBAN NAME | Degree Urban Name | NVARCHAR | DEG URBAN NAME is a character field indicates degree of urban name for the location of the crash. | 
+SRNS | SRNS | VARCHAR | State road numbering system code | 
+RMA | RMA | VARCHAR | RMA Classification of the road contains VicRoads road classification. | 
+DIVIDED | Divided | VARCHAR | DIVIDED is a character field indicating divided portion of road. | 
+STAT DIV NAME | Stat Div Name | CHAR | STAT DIV NAME is a character field indicates statistical division name for the location of the crash. | 
+
+
